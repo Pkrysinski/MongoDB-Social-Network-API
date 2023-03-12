@@ -4,14 +4,14 @@
 The purpose of this app is to create an API to handle CRUD functionality against a MongoDB database with a Mongoose wrapper.
 
 
-## Educational Concepts Implemented
->TBD
+## Technologies Highlighted
+>MongoDB
 
->TBD
+>Mongoose
 
->TBD
+>Node.js
 
->TBD
+>Express.js
 
 ## Links
 
@@ -19,7 +19,7 @@ Link to deployed application...
 
 
 Link to GitHub repo...
-
+https://github.com/Pkrysinski/MongoDB-Social-Network-API
 
 ## User Story
 
