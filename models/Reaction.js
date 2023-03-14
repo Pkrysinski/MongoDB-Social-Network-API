@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const { Reaction } = require('.');
 
 // Schema to create Reaction model
 const reactionSchema = new Schema(
@@ -16,7 +15,7 @@ const reactionSchema = new Schema(
         maxLength: 280,        
     },
     username: {
-        type: string,
+        type: String,
         required: true, 
     },
     createdAt: {

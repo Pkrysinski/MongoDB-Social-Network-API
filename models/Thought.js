@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const { Thought } = require('.');
+// const { Thought } = require('.');
 
 // Schema to create Thought model
 const thoughtSchema = new Schema(
@@ -15,11 +15,11 @@ const thoughtSchema = new Schema(
         default: Date.now,
     },
     username: {
-        type: string,
+        type: String,
         required: true, 
     },
     reactions: {
-        type: string,
+        type: String,
         required: true, 
     },
   },

@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 var validateEmail = function(email) {
     var RegExPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    return RegExPattern.test(email)
+    return RegExPattern.test(email);
 };
 
 // Schema to create User model
