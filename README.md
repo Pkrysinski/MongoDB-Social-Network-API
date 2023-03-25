@@ -56,7 +56,6 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
     -DELETE to remove user by its _id.
 
     -POST to create a new thought.
-        +TODO: Creates a new thought, but doesn't push the thoughtID to the user.thoughts array.
     -PUT to update a thought by its _id.
     
 

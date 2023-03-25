@@ -25,7 +25,7 @@ const reactionSchema = new Schema(
   }
 );
 
-// Create a virtual property `fullName` that gets and sets the user's full name
+// Use a getter method to format the timestamp on query
 reactionSchema
   // Getter
   .get(function () {
