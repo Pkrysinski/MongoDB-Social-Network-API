@@ -35,7 +35,7 @@ GIVEN a social network API...
 - - - - -
 WHEN I enter the command to invoke the application,
 THEN my server is started and the Mongoose models are synced to the MongoDB database.
->DONE.
+>DONE.  Server starts up without issue and is able to be interacted with.
 
 - - - - -
 WHEN I open API GET routes in Insomnia for users and thoughts,
@@ -57,8 +57,7 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 
     -POST to create a new thought.
     -PUT to update a thought by its _id.
-    -DELETE to delete a thought by it's _id
-        +TODO: Delete works, but doesn't remove the thought._id from the user's array.
+    -DELETE to delete a thought by it's _id.
 
 - - - - -
 WHEN I test API POST and DELETE routes in Insomnia,
