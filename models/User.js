@@ -8,7 +8,7 @@ var validateEmail = function(email) {
 // Schema to create User model
 const userSchema = new Schema(
   {
-    username: {
+    userName: {
         type: String, 
         unique: true, 
         required: true, 
@@ -52,14 +52,7 @@ userSchema
   .get(function () {
     return this.friends.length;
   })
-  // Setter to set the first and last name
-  // PAK TODO - Might not need this?
-  .set(function (v) {
-    const first = v.split(' ')[0];
-    const last = v.split(' ')[1];
-    this.set({ first, last });
-  });
-
+  
 // Initialize our User model
 const User = model('user', userSchema);
 
