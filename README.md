@@ -44,6 +44,9 @@ THEN the data for each of these routes is displayed in a formatted JSON.
     -GET all users.
     -GET a single user by its _id and populated thought and friend data.
 
+    -GET all thoughts.
+    -
+
 - - - - -
 WHEN I test API POST, PUT, and DELETE routes in Insomnia,
 THEN I am able to successfully create, update, and delete users and thoughts in my database.
