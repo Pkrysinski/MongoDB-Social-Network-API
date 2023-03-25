@@ -57,7 +57,8 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 
     -POST to create a new thought.
     -PUT to update a thought by its _id.
-    
+    -DELETE to delete a thought by it's _id
+        +TODO: Delete works, but doesn't remove the thought._id from the user's array.
 
 - - - - -
 WHEN I test API POST and DELETE routes in Insomnia,
