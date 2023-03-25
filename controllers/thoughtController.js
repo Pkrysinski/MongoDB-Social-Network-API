@@ -7,32 +7,34 @@ module.exports = {
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
+
   // Get a single thought
   getSingleThought(req, res) {
-    User.findOne({ _id: req.params.id })
+    Thought.findOne({ _id: req.params.id })
       .select('-__v')
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
-          : res.json(user)
+          : res.json(thought)
       )
       .catch((err) => res.status(500).json(err));
   },
 
+  // Create a thought
   createThought(req, res) {
     Thought.create(req.body)
       .then((thought) => {
         return User.findOneAndUpdate(
-          { _id: req.body.thoughtID },
-          { $push: { thoughts: thought._id } },
+          { _id: req.body.userID },
+          { $addToSet: { thoughts: thought._id } },
           { new: true }
         );
       })
-      .then((post) =>
-        !post
+      .then((User) =>
+        !User
           ? res
               .status(404)
-              .json({ message: 'thought created, but no reactions with this ID' })
+              .json({ message: 'thought created, but no user found with that ID' })
           : res.json({ message: 'thought created' })
       )
       .catch((err) => {
@@ -45,7 +47,7 @@ module.exports = {
   // Updates a thought using the findOneAndUpdate method. Uses the ID, and the $set operator in mongodb to inject the request body. Enforces validation.
   updateThought(req, res) {
     Thought.findOneAndUpdate(
-      { _id: req.params.thoughtID },
+      { _id: req.params.id },
       { $set: req.body }
     )
       .then((thought) =>
@@ -61,13 +63,12 @@ module.exports = {
 
   // Delete a thought
   deleteThought(req, res) {
-    Thought.findOneAndDelete({ _id: req.params.userId })
+    Thought.findOneAndDelete({ _id: req.params.id })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
-          : res.json(thought)
+          : res.json('thought deleted!')
       )
-      .then(() => res.json({ message: 'thought deleted!' }))
       .catch((err) => res.status(500).json(err));
   },
 };

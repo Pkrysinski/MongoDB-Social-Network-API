@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-// const { Thought } = require('.');
 
 // Schema to create Thought model
 const thoughtSchema = new Schema(
@@ -39,13 +38,6 @@ thoughtSchema
   .get(function () {
     return this.reactions.length;
   })
-  // Setter to set the first and last name
-  // PAK TODO - Might not need this?
-  .set(function (v) {
-    const first = v.split(' ')[0];
-    const last = v.split(' ')[1];
-    this.set({ first, last });
-  });
 
 // Initialize our User model
 const Thought = model('thought', thoughtSchema);

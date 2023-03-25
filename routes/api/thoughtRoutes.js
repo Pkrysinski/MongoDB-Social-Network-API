@@ -8,15 +8,14 @@ const {
     deleteThought
 } = require('../../controllers/thoughtController');
 
-
 // /api/apps
 router.route('/')
     .get(getThoughts)
     .post(createThought)
     ;
 
-// /api/apps/:userId
-router.route('/:userId')
+// /api/apps/:thoughtId
+router.route('/:id')
     .get(getSingleThought)
     .put(updateThought)
     .delete(deleteThought);
