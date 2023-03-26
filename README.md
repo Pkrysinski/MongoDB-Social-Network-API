@@ -45,7 +45,7 @@ THEN the data for each of these routes is displayed in a formatted JSON.
     -GET a single user by its _id and populated thought and friend data.
 
     -GET all thoughts.
-    -GET single thought.
+    -GET single thought by its _id.
 
 - - - - -
 WHEN I test API POST, PUT, and DELETE routes in Insomnia,
