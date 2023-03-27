@@ -16,11 +16,14 @@ The purpose of this app is to create an API to handle CRUD functionality against
 ## Links
 
 Link to video walkthrough...
+https://drive.google.com/file/d/1HyAFOXtpFOdn_lRTmV5z_wRsMM5kx81p/view
 
 Link to GitHub repo...
 https://github.com/Pkrysinski/MongoDB-Social-Network-API
 
 Screenshot of application...
+![image](https://user-images.githubusercontent.com/25781123/228038899-cc81fb54-f5c6-4be9-983f-64d9aa92df51.png)
+
 
 ## User Story
 
