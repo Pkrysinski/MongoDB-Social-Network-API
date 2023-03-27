@@ -15,11 +15,12 @@ The purpose of this app is to create an API to handle CRUD functionality against
 
 ## Links
 
-Link to deployed application...
-
+Link to video walkthrough...
 
 Link to GitHub repo...
 https://github.com/Pkrysinski/MongoDB-Social-Network-API
+
+Screenshot of application...
 
 ## User Story
 
@@ -62,3 +63,5 @@ THEN I am able to successfully create, update, and delete users and thoughts in 
 - - - - -
 WHEN I test API POST and DELETE routes in Insomnia,
 THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list.
+>DONE:
+    -Can successfully create and delete reactions to thoughts.
